@@ -1,0 +1,7 @@
+{
+  "name": "APPalo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
