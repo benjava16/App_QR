@@ -23,14 +23,19 @@
     <ion-avatar slot="start">
       <img alt="User" src="https://w7.pngwing.com/pngs/81/570/png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo.png" />
     </ion-avatar>
-    <ion-input type="user" label="Usuario" value=""></ion-input>
+    <ion-input type="email" label="Correo" placeholder="Ingresa tu correo" labelPlacement="floating" [(ngModel)]="data.email" ></ion-input>
   </ion-item>
 
   <br>
 
   <!--Botón "recuperar contraseña" y que redirige a Home(ingreso de credenciales)-->
-  <ion-button style="--color:white;" color="primary" [routerLink]="['/home']">Recuperar contraseña</ion-button>  
-
+  <ion-button id="present-alert" style="--color:white;" color="primary" (click)="enviarInicio()" [routerLink]="['/home']">Recuperar contraseña</ion-button> 
+  <ion-alert
+    trigger="present-alert"
+    header="Recuperacion de Contraseña"
+    message="Se le ha enviado un link de recuperacion de contraseña a su correo: {{data.email}}"
+    [buttons]="alertButtons" 
+  ></ion-alert>
 </ion-content>
 
 <ion-footer [translucent]="true">

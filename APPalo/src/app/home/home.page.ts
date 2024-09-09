@@ -3,7 +3,7 @@ import { NavController } from '@ionic/angular';
 import {  NavigationExtras } from '@angular/router';
 
 
-@Component({
+  @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
@@ -14,6 +14,7 @@ export class HomePage{
 data={
   user:'',
   password:'',
+  email: '',
 }
   constructor(private nCtrl:NavController) {}
   //métodos
